@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Relative Length Unit</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .section {
+        margin-bottom: 40px;
+        padding: 10px;
+        border: 2px dashed #aaa;
+      }
+      .section h2 {
+        margin-bottom: 10px;
+      }
+      html {
+        font-size: 16px;
+      }
+      .em-parent {
+        font-size: 20px;
+        background: #f0e68c;
+        padding: 10px;
+      }
+      .em-child {
+        font-size: 1.5em;
+        background: #ffa07a;
+        padding: 5px;
+      }
+      .rem-child {
+        font-size: 1.5rem;
+        background: #98fa98;
+        padding: 5px;
+      }
+
+      .vwh-box {
+        width: 50vw;
+        height: 20vh;
+        background: plum;
+      }
+      .percent-parent {
+        width: 800px;
+        height: 400px;
+        background: lightgray;
+        position: relative;
+      }
+      .percent-child {
+        width: 50%;
+        height: 50%;
+        background: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <h2>em vs rem Example</h2>
+      <div class="em-parent">
+        Parent font-size= 20px
+        <div class="em-child">I am 1.5em=30px</div>
+        <div class="rem-child">I am 1.5rem=24px</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>vw/ vh Example</h2>
+      <div class="vwh-box"></div>
+      <p>
+        The purple box is 50vw (half viewport width) and 20vh(20% viewport
+        height).
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>% Example</h2>
+      <div class="percent-parent">
+        <div class="percent-child"></div>
+      </div>
+      <p>The blue box is 50% width and 50% height of its gray parent.</p>
+    </div>
+  </body>
+</html>
