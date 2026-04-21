@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing Demo</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            display:flex;
+            gap: 30px;
+            margin: 40px;
+        }
+        .box{
+            width: 400px;
+            height: 150px;
+            padding: 40px;
+            border: 5px solid #e67e22;
+            background-color: #f39c12;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 25px;
+        }
+        .content-box{
+            box-sizing:content-box; /*default*/
+        }
+        .border-box{
+            box-sizing:border-box;/*include padding+border*/
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Content-box</h2>
+        <div class="box content-box">
+            This box is set to <strong>content-box</strong>.<br>
+            Total width = 400px+ padding +border.<br>
+            So it actually renders **bigger** than 400px.
+        </div>
+    </div>
+    <div>
+        <h2>border-box</h2>
+        <div class="box border-box">
+            Total box is set to <strong>border-box<strong>.<br>
+                Total width = 400px (fixed).<br>
+                Padding + border are included inside,<br>
+                 so the content area shrinks.
+        </div>
+    </div>
+</body>
+</html>

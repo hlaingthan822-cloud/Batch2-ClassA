@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Examples</title>
+    <style>
+      .box {
+        background: #3b82f6;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 4px;
+      }
+      .block {
+        display: block;
+      }
+      .inline {
+        display: inline;
+      }
+      .inline-block {
+        display: inline-block;
+        width: 120px;
+      }
+      .none {
+        display: none;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row; /*default*/
+        justify-content: center;/*horizonal*/
+        align-items: center;/*vertical*/
+        height: 200px;
+        background: #e5e7eb;
+        padding: 10px;
+      }
+      .flex-item {
+        background: #10b981;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Display Property</h1>
+    <h2>Block</h2>
+    <div class="box block">I am block (full width)</div>
+    <div class="box block">Another block</div>
+
+    <h2>Inline</h2>
+    <span class="box inline">I am inline</span>
+    <span class="box inline">Another inline</span>
+
+    <h2>Inline-block</h2>
+    <span class="box inline-block">I am inline-block</span>
+    <span class="box inline-block">Another inline-block</span>
+
+    <h2>None</h2>
+    <div class="box none">You can't see me</div>
+
+    <!--New Section-->
+    <h2>Flex</h2>
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>
