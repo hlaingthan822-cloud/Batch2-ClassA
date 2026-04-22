@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Navbar example</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        position: sticky;
+        top: 0;
+        background: #1e293b;
+        color: white;
+        padding: 1rem;
+        z-index: 1000;
+      }
+      .navbar a {
+        color: white;
+        margin-right: 1rem;
+        text-decoration: none;/*Underlineပျောက်ချင်လို့*/
+      }
+      main {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <p>Scroll down to see the sticky nav in action...</p>
+      <div style="height: 1500px"></div>
+    </main>
+  </body>
+</html>

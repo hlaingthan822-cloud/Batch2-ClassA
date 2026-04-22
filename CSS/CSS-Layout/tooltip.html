@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+      }
+      .tooltip-btn {
+        position: relative;
+        padding: 0.5rem 1rem;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .tooltip {
+        visibility: hidden;
+        position: absolute;
+        bottom: -125%;
+        left: 0px;
+        background: #333;
+        color: #fff;
+        padding: 0.5rem;
+        border-radius: 4px;
+        white-space: nowrap;
+        z-index: 10;
+        opacity: 0;
+        opacity: 0.3s;
+      }
+      .tooltip-btn:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="tooltip-btn">
+      Hover me
+      <span class="tooltip">Tooltip Text</span>
+    </button>
+  </body>
+</html>
