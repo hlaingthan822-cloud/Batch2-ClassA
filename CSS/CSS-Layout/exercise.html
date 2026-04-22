@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: burlywood;
+      }
+
+      form {
+        
+        margin-left: 500px;
+        margin-right: 500px;
+        padding: 25px;
+       
+        top: 10px;
+        padding: auto;
+
+        width: 200px;
+        height: 550px;
+        background-color: rgb(216, 156, 83);
+
+        padding: 25px;
+        width: 300px;
+        height: 550px;
+        border: 1px solid #d42121;
+      }
+      h2 {
+        text-align: center;
+      }
+      label {
+        display: flex;
+        width: 300px;
+        height: 10px;
+      }
+      input {
+   
+        width: 250px;
+        height: 20px;
+      }
+      select {
+       
+        width: 255px;
+        height: 25px;
+        box-sizing: border-box;
+      }
+      button {
+     
+        height: 30px;
+        align-items: center;
+        background-color: aqua;
+        width: 260px;
+        
+        left: 300px;
+        right: 20px;
+        color: black;
+        margin-top: 15px;
+      }
+      button:hover {
+        background-color: blue;
+      }
+      .name1{
+        margin-left: 10px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h2>Register</h2>
+      <div class="name1">
+      <label for="name">Name</label><br>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Ehter your name"
+      /><br />
+
+      <label for="rollno">Rollno</label><br>
+      <input
+        type="text"
+        id="rollno"
+        name="rollno"
+        placeholder="Enter your rollno"
+      /><br />
+
+      <label for="address">Address</label><br>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        placeholder="Enter your address"
+      /><br />
+
+      <label for="birth">Date of Birth</label><br>
+      <input
+        type="date"
+        id="birth"
+        name="birth"
+        placeholder="Enter your birthday"
+      /><br />
+
+      <label for="pno">PhoneNo</label><br>
+      <input
+        type="tel"
+        id="pno"
+        name="pno"
+        placeholder="Enter your phoneNo"
+      /><br />
+
+      <label for="class">Class</label><br>
+
+      <select>
+        <option>First Year</option>
+        <option>Second Year</option>
+        <option>Third Year</option>
+        <option>Fourth Year</option>
+        <option>Fifth Year</option></select
+      ><br />
+
+      <label for="major">Major</label><br>
+
+      <select>
+        <option>CS</option>
+        <option>CT</option>
+      </select>
+      <br />
+      <label for="subject">Subject</label><br>
+      <input type="text" id="subject" name="subject" />
+      <button>Submit</button></div>
+    </form>
+  </body>
+</html>
