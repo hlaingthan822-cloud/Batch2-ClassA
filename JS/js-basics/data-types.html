@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data types Examples</title>
+  </head>
+  <body>
+    <h1>
+      Javascript Data Types: Strint,Number, Boolean, Undefined,Null,Object,Array
+      Example
+    </h1>
+    <script>
+      /*String
+        Represent a sequence of characters (text).*/
+      let name = "Alice";
+      let greeting = "Hello, world!";
+      /*Number
+       */
+      let age = 30;
+      let price = 19.99;
+      /*
+        Boolean 
+        Represent a logical value:true or false
+        */
+      let isLoggedIn = true;
+      let isAdmin = false;
+
+      /*
+       Undefined
+       A variable that has been declared but not assigned a value.*/
+      let score;
+      console.log(score);
+      /*
+      Null
+      Represent the intentional absence of any object value.
+       */
+      let selectedUser = null;
+      /*Object
+       Used to store collections of data and more complex entities.
+         */
+      let user = {
+        name: "Alice",
+        age: 25,
+        isMember: true,
+      };
+      /*Array
+      An Array is a type of that holds an ordered collection of values*/
+      //An array of numbers
+      let numbers = [1, 2, 3, 4, 5];
+      //An array of strings
+      let fruits = ["Apple", "banana", "cherry"];
+      /*Type checking
+      You can check the type using typeof:
+      */
+      console.log("name data type:", typeof name); //"String"
+      console.log("age data type:", typeof age); //"number"
+      console.log("isLoggedIn data type:", typeof isLoggedIn); //"boolean"
+      console.log("score data type:", typeof score); //"Undefined"
+      console.log("selectedUser data type:", typeof selectedUser); //"object" (that is a known quirk in Javascript)
+      //Check  Array Type
+      console.log("Check fruits is array or not: " + Array.isArray(fruits)); //true
+      console.log("fruits data type: " + typeof fruits);//"object"
+    </script>
+  </body>
+</html>
