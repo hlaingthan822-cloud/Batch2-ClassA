@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Operators Example</title>
+  </head>
+  <body>
+    <h2>Javascript String Operator</h2>
+    <script>
+      //Using + to join (concatenate) strings
+      let firstName = "Aung";
+      let lastName = "Min";
+      let fullName = firstName + " " + lastName;
+      document.write("Full Name: " + fullName + "<br>");
+
+      //Joining string with text
+      let greeting = "Hello, " + fullName + "!";
+      document.write("Greeting: " + greeting + "<br>");
+
+      //Adding multiple strings together
+      let message =
+        "My name is " + firstName + " " + lastName + " and I love Javascript.";
+      document.write(message + "<br>");
+
+      //mixing strings and numbers
+      let age = 20;
+      let intro = fullName + " is " + age + " years old.";
+      document.write(intro + "<br>");
+    </script>
+  </body>
+</html>

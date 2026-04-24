@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary Operator Example</title>
+  </head>
+  <body>
+    <h2>Javascript Ternary Operator</h2>
+    <script>
+      //Basic Example
+      let age = 18;
+
+      //condition ? value_if_true:value_if_false
+      let message = age >= 18 ? "You are an adult" : "You are under 18.";
+      document.write("Age: " + age + "<br>");
+      document.write("Message: " + message + "<br><br>");
+
+      //Another example with numbers
+      let score = 75;
+      let result = score >= 50 ? "Pass" : "Fail";
+      document.write("Score: " + score + "<br>");
+      document.write("Result: " + result + "<br><br>");
+
+      //Example with user status
+      let isLoggedIn = true;
+      let greeting = isLoggedIn ? "Welcome back! " : "Please log in.";
+      document.write("Greeting: " + greeting + "<br>");
+    </script>
+  </body>
+</html>
