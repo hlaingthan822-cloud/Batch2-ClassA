@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Function Types</title>
+  </head>
+  <body>
+    <h1>Javascript Function Types</h1>
+    <script>
+      //1. function declaration
+      function sayHelloDeclaration() {
+        console.log("Hello from function Declaration");
+      }
+      sayHelloDeclaration();
+      //2.Function Expression
+      const sayHelloExpression = function () {
+        console.log("Hello from function Expression");
+      };
+      sayHelloExpression();
+
+      //3. Arrow function
+      const sayHelloArrow = () => {
+        console.log("Hello from Arrow function");
+      };
+
+      sayHelloArrow();
+    </script>
+  </body>
+</html>

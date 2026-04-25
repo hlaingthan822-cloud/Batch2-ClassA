@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javaescript scope and closures Examples</title>
+  </head>
+  <body>
+    <h1>Javascript scope and closures examples</h1>
+    <script>
+      /*
+        scope:
+        Local scope: Variables declared inside a function are only accessible inside that function. 
+        Global Scope: Variables declared outside functions are accessible anywhere.*/
+      let globalVar = "I'm global";
+      function testScope() {
+        let localVar = "I'm local";
+        console.log(globalVar);
+        console.log(localVar);
+      }
+      testScope();
+      console.log(localVar); //Error:LocalVar is not defined
+
+      /*
+Closures:
+A clocures is a function that "remembers" its outer scope, even after the outer 
+function hes finished running.
+*/
+      function outer() {
+        let count = 0;
+        return function inner() {
+          count++;
+          console.log("Count: ", count);
+        };
+      }
+      const counter = outer();
+      counter(); //counter1
+      counter(); //counter2
+      counter(); //counter3
+      //inner() still has access to count even though outer() has finished executing.
+    </script>
+  </body>
+</html>
