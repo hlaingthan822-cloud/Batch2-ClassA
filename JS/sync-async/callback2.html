@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Callback Hell Example</title>
+  </head>
+  <body>
+    <h2>Open your console to see the output!</h2>
+    <script>
+      //Simulate an async function to get user
+      function getUser(callback) {
+        console.log("Getting user....");
+        setTimeout(() => {
+          const user = { id: 1, name: "Alice" };
+          console.log("User received: ", user);
+          callback(user);
+        }, 5000);
+      }
+
+      //Simulate an async function to get posts by user
+      function getPosts(userId, callback) {
+        console.log("Getting posts for users : ", userId);
+        setTimeout(() => {
+          const posts = [
+            { id: 101, title: "Post 1" },
+            { id: 102, title: "Post 2" },
+          ];
+          console.log("Posts received :", posts);
+          callback(posts);
+        }, 5000);
+      }
+      //Simulate an async function to get comments for a post
+      function getComments(postId, callback) {
+        console.log("Getting comments for post : ", postId);
+        setTimeout(() => {
+          const comments = [
+            { id: 201, text: "Great post!" },
+            { id: 202, text: "Nice info!" },
+          ];
+          console.log("Comments received : ", comments);
+          callback(comments);
+        }, 5000);
+      }
+
+      //Nested callbacks (callback Hell)
+      getUser(function (user) {
+        getPosts(user.id, function (posts) {
+          getComments(posts[0].id, function (comments) {
+            console.log("All data loaded successfully!", comments);
+          });
+        });
+      });
+      console.log("End of all final console");
+    </script>
+  </body>
+</html>

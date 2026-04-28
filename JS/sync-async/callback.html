@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Eample</title>
+  </head>
+  <body>
+    <h1>Open your browser console to see the callback example</h1>
+    <script>
+      function fetchData(callback) {
+        console.log("Fetching data...");
+        setTimeout(() => {
+          const data = { name: "Alice", age: 25 };
+          callback(data);
+        }, 5000);
+      }
+      fetchData((result) => {
+        console.log("Data received: ", result);
+      });
+    </script>
+  </body>
+</html>

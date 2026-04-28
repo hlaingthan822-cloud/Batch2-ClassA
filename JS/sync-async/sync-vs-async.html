@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronous vs Asychronous Example</title>
+  </head>
+  <body>
+    <h1>Open your browser console to see the output</h1>
+    <script>
+      //Synchronous
+      console.log("1");
+      console.log("2");
+      console.log("3");
+      
+      console.log("A");
+
+      //Async Function(using setTimeout)
+      setTimeout(() => {
+        console.log("B (after 5 seconds)");
+      }, 5000); //1oooms=1s
+      console.log("C");
+      //Output:
+      //A
+      //C
+      //B(after 5 seconds)
+    </script>
+  </body>
+</html>
