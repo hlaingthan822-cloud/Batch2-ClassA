@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polymorphism Exercise</title>
+  </head>
+  <body>
+    <script>
+      /*class Shape {
+        getArea() {
+          console.log(" Shape Area ");
+        }
+      }
+      class Rectangle extends Shape {
+        getArea(width, height) {
+          console.log(`Area of rectangle: ${width * height}`);
+        }
+      }
+      class Circle extends Shape {
+        getArea(radius) {
+          console.log(`Area of circle: ${Math.PI * radius ** 2}`);
+        }
+      }
+      class Triangle extends Shape {
+        getArea(base, height) {
+          console.log(`Area of triangle: ${0.5 * base * height}`);
+        }
+      }
+      const c = new Rectangle();
+      c.getArea(2, 3);
+      const c2 = new Circle();
+      c2.getArea(2);
+      const c3 = new Triangle();
+      c3.getArea(2, 8);*/
+      class Shape {
+        getArea() {
+          console.log("Shape Area");
+        }
+      }
+      class Rectangle extends Shape {
+        constructor(width, height) {
+          super();
+          this.width = width;
+          this.height = height;
+        }
+        getArea() {
+          return this.width * this.height;
+        }
+      }
+      class Circle extends Shape {
+        constructor(radius) {
+          super();
+          this.radius = radius;
+        }
+        getArea() {
+          return Math.PI * this.radius ** 2;
+        }
+      }
+      class Triangle extends Shape {
+        constructor(base, height) {
+          super();
+          this.base = base;
+          this.height = height;
+        }
+        getArea() {
+          return 0.5 * this.base * this.height;
+        }
+      }
+      let c1;
+      c1 = new Rectangle(3, 2);
+      console.log("Area is: " + c1.getArea()); //6
+      c1 = new Circle(2);
+      console.log("Area is: " + c1.getArea()); //12.8
+      c1 = new Triangle(3, 4);
+      console.log("Area is: " + c1.getArea()); //6
+    </script>
+  </body>
+</html>
