@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript filter()- Examples</title>
+  </head>
+  <body>
+    <h1>Javascript filter-Example</h1>
+    <script>
+      //Example1: Filter out even numbers.
+      const numbers = [1, 2, 3, 4, 5, 6];
+      const even = numbers.filter((num) => num % 2 === 0);
+      console.log(even);
+
+      //Example2 : Filter only adults
+      const people = [
+        { name: "Anna", age: 17 },
+        { name: "Tom", age: 22 },
+        { name: "Lisa", age: 19 },
+      ];
+      const adults = people.filter((person) => person.age >= 18);
+      console.log(adults);
+      //[{"name: "Tom",age:22},{name: "Lisa",age:19}]
+    </script>
+  </body>
+</html>

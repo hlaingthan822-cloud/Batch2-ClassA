@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript map()-Examples</title>
+  </head>
+  <body>
+    <h1>Javascript map()-Examples</h1>
+    <script>
+      //example1 :Double the number in an array
+      const numbers = [1, 2, 3, 4];
+      const doubled = numbers.map((num) => {
+        return num * 2; //must be returned :
+      });
+      console.log(doubled); //[2,4,6,8]<=new array
+
+      //Example2: Extract names from an array of objects
+      const users = [
+        { name: "Alice", age: 21 },
+        { name: "Bob", age: 25 },
+      ];
+      const names = users.map((user) => user.name);
+      console.log(names);
+      console.log(users);
+    </script>
+  </body>
+</html>

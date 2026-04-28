@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try....catch....finally-Example</title>
+  </head>
+  <body>
+    <h1>try..catch...finally-Example</h1>
+    <script>
+      try {
+        //Code that might cause an error
+        let number = "abc";
+        let result = number * 2; //NaN (Not an Error)
+        console.log("result", result);
+        //But this will cause an error
+        console.log(undeclaredVariable); //referenceError
+      } catch (error) {
+        console.log("Error found!");
+        console.log("Error Name : " + error.name);
+        console.log("Error Message : " + error.message);
+      } finally {
+        console.log("Code finished running (with of without error).");
+      }
+    </script>
+  </body>
+</html>

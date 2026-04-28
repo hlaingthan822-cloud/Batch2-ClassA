@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Division Example</title>
+  </head>
+  <body>
+    <h1>Division Example</h1>
+    <script>
+      function divide(a, b) {
+        try {
+          if (b === 0) {
+            throw new Error("Cannot divide by zero!");
+          }
+          console.log("Result: ", a / b);
+        } catch (error) {
+          console.log(error.message);
+        } finally {
+          console.log("Done checking division");
+        }
+      }
+      divide(10, 2); //Works
+      divide(5, 0); //Error
+    </script>
+  </body>
+</html>
