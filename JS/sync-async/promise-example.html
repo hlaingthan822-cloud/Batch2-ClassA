@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating and Using a Promise</title>
+  </head>
+  <body>
+    <h1>Creating and Using a Promise</h1>
+    <p>Open the console to see the result.</p>
+    <script>
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise resolved successfully!");
+        }, 5000);
+      });
+      myPromise.then((message) => {
+        console.log(message);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await Example</title>
+  </head>
+  <body>
+    <h1>Async / Await Example</h1>
+    <p>Open the open to see the output</p>
+    <script>
+      function getUser() {
+        return new Promise((resolve) => {
+          const user = { id: 1, name: "Alice" };
+          setTimeout(() => resolve(user), 5000);
+        });
+      }
+      async function showUser() {
+        console.log("Loading...");
+        const result = await getUser(); //waiting user information using await
+        console.log(result);
+        console.log("Done!");
+      }
+      showUser();
+    </script>
+  </body>
+</html>
