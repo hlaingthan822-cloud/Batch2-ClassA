@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce Exercise3</title>
+  </head>
+  <body>
+    <h1>Reduce Exercise3</h1>
+    <script>
+      const colors = ["red", "blue", "red", "green", "blue", "red"];
+      const count = colors.reduce((acc, color) => {
+        acc[color] = (acc[color] || 0) + 1;
+        return acc;
+      }, {});
+      console.log(count);
+    </script>
+  </body>
+</html>

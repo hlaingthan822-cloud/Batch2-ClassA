@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce exercise1</title>
+  </head>
+  <body>
+    <h1>Reduce Exercise1</h1>
+    <script>
+      const cart = [{ price: 100 }, { price: 200 }, { price: 50 }];
+      const result = cart.reduce((acc, curr) => acc + curr.price, 0);
+      console.log("Price: ", result);
+    </script>
+  </body>
+</html>

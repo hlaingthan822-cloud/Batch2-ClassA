@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Exercise 3</title>
+  </head>
+  <body>
+    <h1>Filter Exercise 3</h1>
+    <script>
+      const products = [
+        { name: "A", inStock: true },
+        { name: "B", inStock: false },
+        { name: "C", inStock: true },
+      ];
+      const result = products.filter((r) => r.inStock === true);
+      console.log(result);
+    </script>
+  </body>
+</html>

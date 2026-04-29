@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce Exercise2</title>
+  </head>
+  <body>
+    <h1>Reduce Exercise2</h1>
+    <script>
+      const number = [5, 8, 2, 10, 3];
+      const result = number.reduce((acc, curr) => {
+        return curr > acc ? curr : acc;
+      });
+      console.log("The Maximun number is ", result);
+    </script>
+  </body>
+</html>
