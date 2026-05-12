@@ -11,22 +11,26 @@ import Card from "../components/Card";
 import Profile from "../components/Profile";
 import StudentList from "../components/StudentList";
 import InputExample from "@/components/InputExample";
+import ToogleMessage from "@/components/ToogleMessage";
+import Counter from "@/components/Counter";
 export default function Home() {
   const user = { name: "Alice", age: 18, country: "Signpore" };
-  const students=["Alice","Maria","John"];
-  function handleClick(){
+  const students = ["Alice", "Maria", "John"];
+  function handleClick() {
     alert("Button clicked");
   }
   return (
     <div>
-      <InputExample/>
+      <ToogleMessage />
+      <Counter />
+      <InputExample />
       <h1> Welcome from Home Page</h1>
       <Welcome />
       <Message />
 
       <Greeting name="Maria" age={12} />
       <Greeting name="Alex" age={18} />
-      <Button onClick={handleClick}/>
+      <Button onClick={handleClick} />
       <Alert name="Ma Ma" age={20} />
 
       <Header />
@@ -43,7 +47,7 @@ export default function Home() {
       <Footer />
       <h1>Profile</h1>
       <Profile user={user} />
-      <StudentList students={students}/>
+      <StudentList students={students} />
     </div>
   );
 }

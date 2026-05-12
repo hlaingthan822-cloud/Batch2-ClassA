@@ -1,0 +1,45 @@
+.containter {
+  max-width: "500px";
+  margin: "40px auto";
+  font-family: "Arial, sans-serif";
+}
+.inputWrapper {
+  display: "flex";
+  gap: "10px";
+  margin-bottom: "20px";
+}
+.input {
+  flex-grow: 1;
+  padding: "8px";
+}
+.addBtn {
+  padding: "8px 16px";
+  background-color: "black";
+  color: "#fff";
+  border: "none";
+  cursor: "pointer";
+}
+.list {
+  list-style: "none";
+  padding: 0;
+}
+.listItem {
+  display: "flex";
+  justify-content: "space-between";
+  background: "gray";
+  padding: "8px";
+  margin-bottom: "8px";
+}
+.editBtn {
+  margin-right: "8px";
+  background: "#2196f3";
+  color: "#fff";
+  border: "none";
+  cursor: "pointer";
+}
+.deleteBtn {
+  background: "red";
+  color: "#fff";
+  border: "none";
+  cursor: "pointer";
+}
