@@ -1,4 +1,5 @@
-import { useState } from "react";
+"use client";
+import {useState} from "react";
 export default function Message() {
   const name = "Maria";
   const [message, setMessage] = useState("Hello!");

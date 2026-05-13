@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Inheritance Exercise</title>
+  </head>
+  <body>
+    <h2>Inheritance Exercise</h2>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        introduce() {
+          console.log(
+            `Hello,my name is ${this.name} and I am ${this.age} years old`,
+          );
+        }
+      }
+
+      class Student extends Person {
+        constructor(name, age, grade) {
+          super(name, age);
+          this.grade = grade;
+        }
+        study() {
+          console.log(`I'm studying in grade ${this.grade} `);
+        }
+      }
+
+      //create objects
+      const myStudent = new Student("Aung Aung", 19, 12);
+      myStudent.introduce();
+      myStudent.study();
+    </script>
+  </body>
+</html>

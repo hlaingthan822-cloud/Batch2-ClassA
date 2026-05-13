@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polymorphism Example-Payment System</title>
+  </head>
+  <body>
+    <h1>Polymorphism Example: Payment Processing</h1>
+    <script>
+      //Bass class
+      class Payment {
+        process(amount) {
+          console.log(`Processing payment of $${amount}`);
+        }
+      }
+      //Sub class
+      class CreditCardPayment extends Payment {
+        process(amount) {
+          console.log(`Processing $${amount}with Credit Card `);
+        }
+      }
+      class PayPalPayment extends Payment {
+        process(amount) {
+          console.log(`Processing $${amount} through PayPal `);
+        }
+      }
+      //Sub class
+      class CryptoPayment extends Payment {
+        process(amount) {
+          console.log(`Processing $${amount}  with CryptoPayment`);
+        }
+      }
+      //Demostrating polymorphism
+      const payments = [
+        new CreditCardPayment(),
+        new PayPalPayment(),
+        new CryptoPayment(),
+      ];
+      payments.forEach((payment) => payment.process(100));
+      //Expected output:
+      //Processing $100 with Credit Card
+      //Processing $100 with PayPal
+      //Processing $100 with CryptoPayment
+    </script>
+  </body>
+</html>

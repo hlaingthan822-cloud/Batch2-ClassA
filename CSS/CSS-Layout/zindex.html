@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Zindex Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .stack-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border: 2px solid #94a3b8;
+        background: #f1f5f9;
+      }
+      .box {
+        position: absolute;
+        width: 150px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        border-radius: 6px;
+      }
+      .box1 {
+        background: #3b82f6;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+      }
+      .box2 {
+        background: #ef4444;
+        top: 40px;
+        left: 60px;
+        z-index: 2;
+      }
+      .box3 {
+        background: #22c55e;
+        top: 60px;
+        left: 100px;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS z-index and Stacking Content</h1>
+    <div class="stack-container">
+      <div class="box box1">z-index 1</div>
+      <div class="box box2">z-index 2</div>
+      <div class="box box3">z-index 3</div>
+    </div>
+    <p>Higher z-index values stack above lower ones.</p>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Class Example</title>
+  </head>
+  <body>
+    <h1>Check the console for output</h1>
+    <script>
+      //Javascript Class
+      class Car {
+        constructor(make, model) {
+          //Properties
+          this.make = make;
+          this.model = model;
+        }
+        //Method
+        start() {
+          console.log(`${this.make} ${this.model} is starting.....`);
+        }
+      }
+      //Create an object
+      const myCar = new Car("Toyota", "Corolla");
+      myCar.start(); //Toyota Corolla is starting...
+      //Create a next object
+      const myCar2 = new Car("Toyota", "Corolla-V2");
+      myCar2.start(); //Toyota Vorolla-v2 is starting...
+    </script>
+  </body>
+</html>

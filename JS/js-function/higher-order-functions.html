@@ -12,16 +12,18 @@
     <h2>3. Real Example- Built-in Javascript Function (forEach)</h2>
     <script>
       console.log("=======Example1 : Passing a function as a parameter");
+
       function sayHello(name) {
         console.log("Hello, " + name + " from sayHello function!");
       }
-
       function greetUser(callback) {
         //callback is a function parameter
         console.log("greetingUser is calling the callback...");
         callback("Aung Aung"); //run the function that was pass in
       }
       greetUser(sayHello);
+
+
       console.log("=====Example2 : Returning a function=====");
       function createGreeter() {
         console.log("createGreeter is returning is returning a new function");
@@ -31,6 +33,8 @@
       }
       const greeter = createGreeter(); //greeter now holds the returned function
       greeter(); //call the return function
+
+      
       console.log(
         "===== Example3 : Built-in Higher-order Function(forEach)===",
       );

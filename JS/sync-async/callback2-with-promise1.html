@@ -71,7 +71,7 @@
         try {
           const user = await getUser();
           const post = await getPosts(user.id);
-          const comment = await getComments(post[0].id);
+          const comment = await getComments(post[0]?.id);
           console.log("comment", comment);
         } catch (error) {
           concole.log("Error in runTask", error);

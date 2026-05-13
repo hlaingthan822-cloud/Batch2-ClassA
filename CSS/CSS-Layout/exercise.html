@@ -7,130 +7,116 @@
     <style>
       body {
         background-color: burlywood;
+        font-family: Arial, sans-serif;
       }
 
       form {
-        
-        margin-left: 500px;
-        margin-right: 500px;
+        /* margin-left: 450px;
+        margin-right: 450px;
         padding: 25px;
-       
-        top: 10px;
-        padding: auto;
+        margin-top: 80px;*/
 
-        width: 200px;
-        height: 550px;
+        width: 320px;
+        margin: 50px auto;
+        padding: 20px;
         background-color: rgb(216, 156, 83);
+        border: 2px solid #d42121;
 
-        padding: 25px;
+        /*background-color: rgb(216, 156, 83);
         width: 300px;
-        height: 550px;
-        border: 1px solid #d42121;
+        height: 400px;
+        border: 1px solid #d42121;*/
       }
       h2 {
         text-align: center;
+        margin-bottom: 15px;
       }
       label {
-        display: flex;
-        width: 300px;
-        height: 10px;
+        /*width: 300px;
+        height: 10px;*/
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
       }
-      input {
-   
-        width: 250px;
-        height: 20px;
-      }
+
+      input,
       select {
-       
+        /*width: 250px;
+        height: 20px;
+        box-sizing: border-box;*/
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+      /*select {
         width: 255px;
         height: 25px;
         box-sizing: border-box;
-      }
+      }*/
+
       button {
-     
-        height: 30px;
+        width: 100%;
+        height: 35px;
+        margin-top: 15px;
+        background-color: aqua;
+        border: none;
+        cursor: pointer;
+
+        /* height: 25px;
         align-items: center;
         background-color: aqua;
-        width: 260px;
-        
+        width: 250px;
+
         left: 300px;
         right: 20px;
         color: black;
-        margin-top: 15px;
+        margin-top: 15px;*/
       }
       button:hover {
         background-color: blue;
-      }
-      .name1{
-        margin-left: 10px;
-       
+        color: white;
       }
     </style>
   </head>
   <body>
-    <form action="">
-      <h2>Register</h2>
-      <div class="name1">
-      <label for="name">Name</label><br>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Ehter your name"
-      /><br />
+    <form>
+  <h2>Register</h2>
 
-      <label for="rollno">Rollno</label><br>
-      <input
-        type="text"
-        id="rollno"
-        name="rollno"
-        placeholder="Enter your rollno"
-      /><br />
+  <label for="name">Name</label>
+  <input type="text" id="name" placeholder="Enter your name">
 
-      <label for="address">Address</label><br>
-      <input
-        type="text"
-        id="address"
-        name="address"
-        placeholder="Enter your address"
-      /><br />
+  <label for="rollno">Roll No</label>
+  <input type="text" id="rollno" placeholder="Enter your roll no">
 
-      <label for="birth">Date of Birth</label><br>
-      <input
-        type="date"
-        id="birth"
-        name="birth"
-        placeholder="Enter your birthday"
-      /><br />
+  <label for="address">Address</label>
+  <input type="text" id="address" placeholder="Enter your address">
 
-      <label for="pno">PhoneNo</label><br>
-      <input
-        type="tel"
-        id="pno"
-        name="pno"
-        placeholder="Enter your phoneNo"
-      /><br />
+  <label for="birth">Date of Birth</label>
+  <input type="date" id="birth">
 
-      <label for="class">Class</label><br>
+  <label for="pno">Phone No</label>
+  <input type="tel" id="pno" placeholder="Enter phone number">
 
-      <select>
-        <option>First Year</option>
-        <option>Second Year</option>
-        <option>Third Year</option>
-        <option>Fourth Year</option>
-        <option>Fifth Year</option></select
-      ><br />
+  <label for="class">Class</label>
+  <select id="class">
+    <option>First Year</option>
+    <option>Second Year</option>
+    <option>Third Year</option>
+    <option>Fourth Year</option>
+    <option>Fifth Year</option>
+  </select>
 
-      <label for="major">Major</label><br>
+  <label for="major">Major</label>
+  <select id="major">
+    <option>CS</option>
+    <option>CT</option>
+  </select>
 
-      <select>
-        <option>CS</option>
-        <option>CT</option>
-      </select>
-      <br />
-      <label for="subject">Subject</label><br>
-      <input type="text" id="subject" name="subject" />
-      <button>Submit</button></div>
-    </form>
+  <label for="subject">Subject</label>
+  <input type="text" id="subject">
+
+  <button type="submit">Submit</button>
+</form>
   </body>
 </html>

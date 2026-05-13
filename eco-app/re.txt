@@ -1,0 +1,166 @@
+page.js
+"use client";
+import Image from "next/image";
+
+export default function Home() {
+  const styles = {
+    main: {
+      position: "relative",
+      minHeight: "100vh",
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      color: "white",
+      fontFamily: "'Segoe UI', Roboto, sans-serif",
+      overflow: "hidden",
+    },
+    // Header အတွက် သီးသန့် Container (Full width ဖြစ်စေဖို့)
+    headerContainer: {
+      position: "relative",
+      zIndex: 20,
+      width: "100%", // Container ကို အပြည့်ယူထားလိုက်ပါပြီ
+    },
+    header: {
+      display: "flex",
+      alignItems: "center",
+      padding: "40px 60px", // ဘယ်ဘက်ထောင့်ကနေ 60px ပဲ ခွာထားပါတယ်
+    },
+    logoGroup: {
+      display: "flex",
+      alignItems: "center",
+      gap: "12px",
+    },
+    logo: {
+      width: "42px",
+      height: "auto",
+    },
+    title: {
+      fontSize: "32px",
+      fontWeight: "700",
+      margin: 0,
+      lineHeight: 1,
+    },
+    // Content (စာသားတွေ) အတွက် သီးသန့် Container
+    contentArea: {
+      flex: 1,
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      position: "relative",
+      zIndex: 10,
+      paddingBottom: "80px",
+    },
+    heroText: {
+      fontSize: "62px",
+      fontWeight: "700",
+      marginBottom: "20px",
+      lineHeight: "1.2",
+      letterSpacing: "-0.5px",
+    },
+    description: {
+      maxWidth: "750px",
+      fontSize: "20px",
+      fontWeight: "400",
+      marginBottom: "40px",
+      lineHeight: "1.6",
+      opacity: "0.9",
+    },
+    buttonGroup: {
+      display: "flex",
+      gap: "20px",
+    },
+    getStartedBtn: {
+      backgroundColor: "#8CC63F",
+      color: "black",
+      padding: "16px 45px",
+      borderRadius: "12px",
+      fontSize: "18px",
+      fontWeight: "700",
+      border: "none",
+      cursor: "pointer",
+    },
+    learnMoreBtn: {
+      backgroundColor: "white",
+      color: "#4A3228",
+      padding: "16px 45px",
+      borderRadius: "12px",
+      fontSize: "18px",
+      fontWeight: "700",
+      border: "none",
+      cursor: "pointer",
+    }
+  };
+
+  return (
+    <main style={styles.main}>
+      {/* Background Image */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        <Image
+          src="/plant.webp"
+          alt="Green sprout in soil"
+          fill
+          quality={100}
+          priority
+          style={{ objectFit: "cover" }}
+        />
+        <div style={{ 
+          position: "absolute", 
+          inset: 0, 
+          background: "rgba(0,0,0,0.15)", 
+        }} />
+      </div>
+
+      {/* Header Area - ဘယ်ဘက်ထောင့်ကပ်ရန် */}
+      <div style={styles.headerContainer}>
+        <div style={styles.header}>
+          <div style={styles.logoGroup}>
+            <img src="/logo.png" alt="Eco Logo" style={styles.logo} />
+            <h1 style={styles.title}>Eco-Tech</h1>
+          </div>
+        </div>
+      </div>
+
+      
+      <div style={styles.contentArea}>
+        <h2 style={styles.heroText}>Save the Planet with Smart Energy</h2>
+        <p style={styles.description}>
+          Our AI-powered system reduces your electricity bill by 40% <br />
+          while lowering the carbon footprints.
+        </p>
+
+        <div style={styles.buttonGroup}>
+          <button style={styles.getStartedBtn}>Get Started</button>
+          <button style={styles.learnMoreBtn}>Learn more</button>
+        </div>
+      </div>
+    </main>
+  );
+}
+******************************
+GetStarted.js
+export default function GetStarted(props) {
+  return (
+    <button
+     
+      onClick={props.onClick}
+      //ON-{()=>props.onClick()}
+    >
+      Get Started
+    </button>
+  );
+}
+************
+LearnMore.js
+export default function LearnMore(props) {
+  return (
+    <button
+      
+      onClick={props.onClick}
+      //ON-{()=>props.onClick()}
+    >
+      Learn More
+    </button>
+  );
+}

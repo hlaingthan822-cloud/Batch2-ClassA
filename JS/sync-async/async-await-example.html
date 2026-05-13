@@ -9,7 +9,7 @@
     <h1>Async / Await Example</h1>
     <p>Open the open to see the output</p>
     <script>
-      function getUser() {
+      /*function getUser() {
         return new Promise((resolve) => {
           const user = { id: 1, name: "Alice" };
           setTimeout(() => resolve(user), 5000);
@@ -21,7 +21,17 @@
         console.log(result);
         console.log("Done!");
       }
-      showUser();
+      showUser();*/
+      function getUser() {
+        return new Promise((resolve) => {
+          const user = { id: 1, name: "Ma Ma" };
+          setTimeout(() => resolve(user), 3000);
+        });
+      }
+      async function showUser() {
+        const result = await getUser();
+        console.log(result);
+      }
     </script>
   </body>
 </html>

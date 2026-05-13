@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Inheritance Example</title>
+  </head>
+  <body>
+    <h1>Class Inheritance Example</h1>
+    <h2>Check the console for output</h2>
+    <script>
+      //Parent Class
+      class Vehicle {
+        constructor(brand) {
+          this.brand = brand;
+        }
+        info() {
+          console.log("This is a info method");
+          console.log(`This is a  ${this.brand}`);
+        }
+      }
+      //Child class -Car
+      class Car extends Vehicle {
+        constructor(brand, model) {
+          super(brand);
+          this.model = model;
+        }
+        start() {
+          console.log(`${this.brand} ${this.model} is starting...`);
+        }
+      }
+
+      //Child class -motorcycle
+      class MotorCycle extends Vehicle {
+        constructor(brand, type) {
+          super(brand);
+          this.type = type;
+        }
+        ride() {
+          console.log(
+            `${this.brand} ${this.type} motorcycle is being ridden!..`,
+          );
+        }
+      }
+      //Create an objects
+      const myCar = new Car("Toyota", "Corolla");
+      myCar.info();
+      myCar.start();
+
+      const myBike = new MotorCycle("Yamaha", "Sport");
+      myBike.info();
+      myBike.ride();
+    </script>
+  </body>
+</html>

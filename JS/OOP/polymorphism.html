@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polymorphism Example</title>
+  </head>
+  <body>
+    <h1>Polymorphism Example: Animal Sounds</h1>
+    <script>
+      class Animal {
+        speak() {
+          console.log("Some generic sound");
+        }
+      }
+      class Dog extends Animal {
+        speak() {
+          console.log("Woof!");
+        }
+      }
+      class Cat extends Animal {
+        speak() {
+          console.log("Meow");
+        }
+      }
+      const animals = [new Dog(), new Cat()];
+      animals.forEach((animal) => animal.speak());
+      //Output:
+      //Woof!
+      //Meow!
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Static Example</title>
+  </head>
+  <body>
+    <h1>Check the console for output</h1>
+
+    <script>
+      //Static method example
+      class MathUtils {
+        static add(a, b) {
+          return a + b;
+        }
+      }
+      //Call static to call on an object
+      console.log(MathUtils.add(5, 10)); //15
+      //Trying to call on an object
+      //will NOT work
+      const calc = new MathUtils();
+      //console.log(calc.add(5,10));
+      //Error: calc.add is not a function
+
+      //Static property example
+      class Circle {
+        static pi = 3.14159;
+        constructor(radius) {
+          this.radius = radius;
+        }
+        area() {
+          return Circle.pi * this.radius ** 2;
+        }
+      }
+      const myCircle = new Circle(5);
+      console.log(myCircle.area()); //78.53975
+      console.log(Circle.pi); //3.14159
+    </script>
+  </body>
+</html>
