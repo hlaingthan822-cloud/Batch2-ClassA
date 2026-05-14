@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ children }) {
   return (
     <footer
       style={{
@@ -8,7 +8,7 @@ export default function Footer() {
         textAlign: "center",
       }}
     >
-      <p>@2026 My React App</p>
+      {children}
     </footer>
   );
 }
