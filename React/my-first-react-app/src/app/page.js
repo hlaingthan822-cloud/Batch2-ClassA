@@ -13,6 +13,7 @@ import StudentList from "../components/StudentList";
 import InputExample from "@/components/InputExample";
 import ToogleMessage from "@/components/ToogleMessage";
 import Counter from "@/components/Counter";
+import ThemeButton from "@/components/ThemeButton";
 export default function Home() {
   const user = { name: "Alice", age: 18, country: "Signpore" };
   const students = ["Alice", "Maria", "John"];
@@ -21,6 +22,7 @@ export default function Home() {
   }
   return (
     <div>
+      <ThemeButton/>
       <ToogleMessage />
       <Counter />
       <InputExample />
