@@ -1,0 +1,23 @@
+info:
+  name: Create Order
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: localhost:4000/api/orders
+  body:
+    type: json
+    data: |-
+      {
+        "date":"13.5.2004",
+        "total_amount":300000,
+        "payment_method":"AYA Bank"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

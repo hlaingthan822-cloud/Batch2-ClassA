@@ -5,7 +5,7 @@ export default function InputExample() {
     <div>
       <input
         type="text"
-        value={name}
+        value="name"
         placeholder="Enter your name."
         onChange={(e) => setName(e.target.value)}
       />

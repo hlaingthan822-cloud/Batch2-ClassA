@@ -37,7 +37,7 @@ export default function Home() {
 
       <Header />
       <main>
-        <Card
+        <Card 
           title="React Basis"
           description="Learn about components and props"
         />

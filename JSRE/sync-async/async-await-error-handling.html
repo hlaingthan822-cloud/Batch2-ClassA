@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await Error Handling</title>
+  </head>
+  <body>
+    <h1>Async / Await Error Handling Example</h1>
+    <p>Open the console to see how try.. catch handles errors</p>
+    <script>
+      //Function that simulates a failed async operation
+      function fetchData() {
+        return new Promise((_, reject) => {
+          setTimeout(() => reject("Network error"), 5000);
+        });
+      }
+
+      //async function with try...catch for error handling
+      async function getData() {
+        try {
+          const data = await fetchData();
+          console.log(data);
+        } catch (error) {
+          console.error("Error: ", error);
+        }
+      }
+      //run the function
+      getData();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Vehicle {
+        constructor(brand) {
+          this.brand = brand;
+        }
+        start() {
+          document.write("Hello");
+        }
+      }
+      class Car extends Vehicle {
+        constructor(brand, model) {
+          super(brand);
+          this.model = model;
+        }
+        info() {
+          document.write(`${this.brand} ${this.model} is starting`);
+        }
+      }
+      class Bicycle extends Vehicle {
+        constructor(brand, model) {
+          super(brand);
+          this.model = model;
+        }
+        ride() {
+          document.write(`${this.brand} ${this.model} is riding`);
+        }
+      }
+      const car = new Car("e", "tyu");
+      car.start();
+      car.info();
+      const moto = new Bicycle("r", "tr");
+      moto.start();
+      moto.ride();
+    </script>
+  </body>
+</html>

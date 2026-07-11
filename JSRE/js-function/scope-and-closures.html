@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let global = "I am global";
+      function Global() {
+        let local = "I am local";
+        console.log(global);
+        console.log(local);
+      }
+      Global();
+     // console.log(local);//
+
+      function outer() {
+        let count = 0;
+        return function inner() {
+          count++;
+          console.log("Count " + count);
+        };
+      }
+      const counter = outer();
+      counter();
+      counter();
+      counter();
+      
+    </script>
+  </body>
+</html>

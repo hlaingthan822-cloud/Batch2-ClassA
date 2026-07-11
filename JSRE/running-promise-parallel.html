@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function task1() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            console.log("Hello");
+          }, 5000);
+        });
+      }
+      function task2() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            console.log("Hello task2");
+          }, 5000);
+        });
+      }
+      async function task() {
+        const result = await Promise.all([task1(), task2()]);
+      }
+      task();
+    </script>
+  </body>
+</html>
